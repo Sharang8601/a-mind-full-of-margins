@@ -2,18 +2,16 @@ services:
   - type: web
     name: margins-backend
     env: docker
-    dockerContext: ./backend
-    dockerfilePath: ./backend/Dockerfile
+    image:
+      url: docker.io/sharang8601/backend:latest
     branch: main
-    autoDeploy: true
+    autoDeploy: false
     envVars:
       - key: PORT
         value: 4000
       - key: FRONTEND_URL
         sync: false
       - key: MONGODB_URI
-        sync: false
-      - key: JWT_SECRET
         sync: false
       - key: NEXTAUTH_SECRET
         sync: false
@@ -22,4 +20,8 @@ services:
       - key: CLOUDINARY_API_KEY
         sync: false
       - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
         sync: false

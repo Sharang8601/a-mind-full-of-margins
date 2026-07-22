@@ -10,8 +10,11 @@ node_modules/
 !.yarn/releases
 !.yarn/versions
 
-# ignore backend completely from github
+# ignore backend completely from github (deployed via Docker Hub)
 backend/
+
+# ignore ghost frontend duplicate
+frontend/
 
 # testing
 coverage/
